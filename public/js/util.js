@@ -14,7 +14,7 @@ define(['jquery'],function($){
         return obj[key];
     }
     function setMenu(pathname){
-        $('.aside .navs a[href="'+pathname+'"]').addClass('active');
+        $('.aside .navs a[href="'+pathname+'"]').addClass('active').closest('ul').show();
     }
     return {
         qs : qs ,

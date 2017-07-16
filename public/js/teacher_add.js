@@ -1,5 +1,5 @@
 define(['jquery','template','util','datepicker','language','validate','form'],function($,template,util){
-    util.setMenu(location.pathname);
+    util.setMenu('/teacher/list');
     var tcId = util.qs('tc_id',location.search);
     if(tcId){
         $.ajax({

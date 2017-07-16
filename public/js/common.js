@@ -1,4 +1,4 @@
-define(['jquery','template','cookie'],function($,template){
+define(['jquery','template','nprogress','cookie'],function($,template,nprogress){
      // 控制左侧菜单的展开和折叠
     $('.navs ul').prev('a').on('click', function () {
         $(this).next().slideToggle();
@@ -33,5 +33,17 @@ define(['jquery','template','cookie'],function($,template){
     if(!$.cookie('PHPSESSID')&& location.pathname !='/'&&location.href != '/index'){
         location.href = '/';
     }
+    //处理进度条加载效果
+    nprogress.start();
+    nprogress.done();
+    //处理遮罩效果
+     $(document).ajaxStart(function(){
+        $('.overlay').show();
+     });
+     $(document).ajaxStop(function(){
+         setTimeout(function(){
+           $('.overlay').hide();
+         },300);
+     });
 })
 	

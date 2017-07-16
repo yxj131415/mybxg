@@ -18,7 +18,15 @@ require.config({
     settings : '../js/settings',
     uploadify : 'uploadify/jquery.uploadify.min',
     region : 'jquery-region/jquery.region',
-    editor : 'ckeditor/ckeditor'
+    editor : 'ckeditor/ckeditor',
+    jcrop : 'jcrop/js/Jcrop',
+    nprogress : 'nprogress/nprogress',
+    echarts : 'echarts/echarts.min',
+    course_list : '../js/course_list',
+    course_add : '../js/course_add',
+    course_basic : '../js/course_basic',
+    course_pic :'../js/course_pic',
+    course_lesson : '../js/course_lesson'
   },
   shim :{
     bootstrap : {
@@ -35,6 +43,9 @@ require.config({
     },
     editor : {
        exports : 'CKEDITOR'
+    },
+    jcrop : {
+       deps : ['jquery']
     }
   }
 });
